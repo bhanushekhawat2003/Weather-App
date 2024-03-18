@@ -27,7 +27,7 @@
     // switching Tab function.
 
      function switchTab(clickedTab){
-
+       
          if(currentTab!=clickedTab){
             currentTab.classList.remove("current-tab");
             currentTab=clickedTab;
@@ -147,15 +147,16 @@
 
     function getLocation(){
                // check if it support on the device.
+            
                
-               
-       if(navigator.getlocation){
+       if(navigator.geolocation){
        
                  navigator.geolocation.getCurrentPosition(showPosition);
        }
        else{
       
         // show alert for no geoloction support available.
+        console.log("hi");
        }
     }
 
@@ -174,7 +175,7 @@
     }
 
    const grantAccessButton=document.querySelector("[data-grantAcess]");
-
+  
    grantAccessButton.addEventListener("click",getLocation);
 
        //  SearchForm Response Submitted by the User.
